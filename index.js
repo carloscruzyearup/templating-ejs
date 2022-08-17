@@ -9,18 +9,36 @@ app.use(express.static(__dirname));
 
 
 app.get('/', (req, res) => {
-	let title = 'Our Home Page'
-	let heading = 'My Website'
+	let title = 'Templating with EJS!'
+	let heading = 'My favorite guitars 🎸';
 	res.render('pages/index', {
 		'title': title,
 		'heading': heading
 	})
 })
 
-app.get('/about', (req, res) => {
-	let title = 'Our About Page'
-	let heading = 'My Website'
-	res.render('pages/about', {
+app.get('/sg', (req, res) => {
+	let title = 'Templating with EJS!'
+	let heading = 'Gibson SG'
+	res.render('pages/sg', {
+		'title': title,
+		'heading': heading
+	})
+})
+
+app.get('/stratocaster', (req, res) => {
+	let title = 'Templating with EJS!'
+	let heading = 'Fender Stratocaster'
+	res.render('pages/stratocaster', {
+		'title': title,
+		'heading': heading
+	})
+})
+
+app.get('/lespaul', (req, res) => {
+	let title = 'Templating with EJS!'
+	let heading = 'Gibson Les Paul'
+	res.render('pages/lespaul', {
 		'title': title,
 		'heading': heading
 	})
